@@ -13,40 +13,104 @@
 
         body {
             margin: 0;
-            padding: 30px;
-            font-family: Arial, sans-serif;
-            background-color: #f2f6fa;
-            color: #222;
+            padding: 32px 18px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #eaf5ff 0%, #f8fbff 52%, #fff7ed 100%);
+            color: #243447;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1040px;
             margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            background: rgba(255, 255, 255, 0.96);
+            padding: 38px;
+            border: 1px solid rgba(23, 105, 170, 0.12);
+            border-radius: 18px;
+            box-shadow: 0 16px 45px rgba(45, 78, 110, 0.14);
         }
 
         h1 {
             text-align: center;
-            color: #1769aa;
-            font-size: 40px;
+            color: #145b8d;
+            font-size: clamp(30px, 5vw, 42px);
             margin-bottom: 10px;
         }
 
         .description {
             text-align: center;
             font-size: 18px;
-            color: #555;
+            color: #5c6b78;
             margin-bottom: 30px;
         }
 
+        .profile {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 28px 0 34px;
+            padding: 20px;
+            background: #f3f8fc;
+            border: 1px solid #dcebf5;
+            border-radius: 14px;
+        }
+
+        .profile-item {
+            padding: 4px 14px;
+            border-left: 3px solid #f28c28;
+        }
+
+        .profile-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #6a7c8b;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .profile-value {
+            color: #173f5f;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
         h2 {
-            color: #1769aa;
-            border-left: 6px solid #1769aa;
+            color: #145b8d;
+            border-left: 6px solid #f28c28;
             padding-left: 12px;
             margin-top: 35px;
+        }
+
+        .task-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 20px 0 34px;
+            padding: 18px 20px;
+            color: #173f5f;
+            background: #fff8ef;
+            border: 1px solid #f4d8b5;
+            border-radius: 12px;
+        }
+
+        .task-link p {
+            margin: 0;
+        }
+
+        .pdf-button {
+            flex-shrink: 0;
+            padding: 11px 17px;
+            color: white;
+            background: #d96b27;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .pdf-button:hover {
+            background: #b9541a;
         }
 
         /* ===== INFOGRAPHIC ===== */
@@ -56,7 +120,8 @@
             display: block;
             margin: 20px auto;
             border-radius: 12px;
-            border: 1px solid #ddd;
+            border: 1px solid #d9e5ed;
+            box-shadow: 0 8px 22px rgba(45, 78, 110, 0.1);
         }
 
         .caption {
@@ -86,7 +151,7 @@
             width: fit-content;
             margin: 20px auto;
             padding: 12px 22px;
-            background-color: #ff0000;
+            background-color: #d93025;
             color: white;
             text-decoration: none;
             border-radius: 8px;
@@ -94,7 +159,7 @@
         }
 
         .youtube-button:hover {
-            background-color: #cc0000;
+            background-color: #b52219;
         }
 
         /* ===== COPYRIGHT ===== */
@@ -106,6 +171,30 @@
             text-align: center;
             color: #666;
             line-height: 1.8;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 16px 10px;
+            }
+
+            .container {
+                padding: 24px 18px;
+                border-radius: 14px;
+            }
+
+            .profile {
+                grid-template-columns: 1fr;
+            }
+
+            .task-link {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            iframe {
+                height: 260px;
+            }
         }
     </style>
 </head>
@@ -122,10 +211,39 @@
         trong thời đại số.
     </p>
 
+    <!-- ==================== THÔNG TIN SINH VIÊN ==================== -->
+
+    <section class="profile" aria-label="Thông tin sinh viên">
+        <div class="profile-item">
+            <span class="profile-label">Họ và tên</span>
+            <span class="profile-value">Nguyễn Văn Long</span>
+        </div>
+        <div class="profile-item">
+            <span class="profile-label">MSSV</span>
+            <span class="profile-value">B2605431</span>
+        </div>
+        <div class="profile-item">
+            <span class="profile-label">Lớp học phần</span>
+            <span class="profile-value">CT005/D05</span>
+        </div>
+    </section>
+
+
+    <!-- ==================== NHIỆM VỤ 1.2 ==================== -->
+
+    <h2>1. Nhiệm vụ 1.2</h2>
+
+    <div class="task-link">
+        <p>Đọc tài liệu PDF của nhiệm vụ 1.2.</p>
+        <a class="pdf-button" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener">
+            Mở file PDF
+        </a>
+    </div>
+
 
     <!-- ==================== INFOGRAPHIC ==================== -->
 
-    <h2>1. Infographic</h2>
+    <h2>2. Infographic</h2>
 
     <!--
         ĐỔI TÊN FILE ẢNH Ở DÒNG SRC NẾU CẦN.
@@ -150,7 +268,7 @@
 
     <!-- ==================== VIDEO ==================== -->
 
-    <h2>2. Video</h2>
+    <h2>3. Video</h2>
 
     <div class="video-box">
 
