@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Công Nghệ Số Trong Học Tập</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1769aa;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1769aa;
+            border-left: 6px solid #1769aa;
+            padding-left: 12px;
+            margin-top: 35px;
+        }
+
+        /* ===== INFOGRAPHIC ===== */
+
+        .infographic {
+            width: 100%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ===== VIDEO ===== */
+
+        .video-box {
+            width: 100%;
+            max-width: 850px;
+            margin: 20px auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .youtube-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 22px;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .youtube-button:hover {
+            background-color: #cc0000;
+        }
+
+        /* ===== COPYRIGHT ===== */
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            color: #666;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TIÊU ĐỀ -->
+    <h1>Công Nghệ Số Trong Học Tập</h1>
+
+    <p class="description">
+        5 lợi ích nổi bật giúp sinh viên học tập hiệu quả hơn
+        trong thời đại số.
+    </p>
+
+
+    <!-- ==================== INFOGRAPHIC ==================== -->
+
+    <h2>1. Infographic</h2>
+
+    <!--
+        ĐỔI TÊN FILE ẢNH Ở DÒNG SRC NẾU CẦN.
+
+        File ảnh của bạn phải nằm cùng thư mục với file HTML.
+        Ví dụ:
+        Lab5_Ex3.1.html
+        Lab05_Ex2.1.png
+    -->
+
+    <img
+        class="infographic"
+        src="Lab05_Ex2.1.png"
+        alt="Infographic Công Nghệ Số Trong Học Tập"
+    >
+
+    <p class="caption">
+        Infographic về lợi ích của công nghệ số trong học tập.
+        Hình ảnh được thực hiện trong Nhiệm vụ 2.
+    </p>
+
+
+    <!-- ==================== VIDEO ==================== -->
+
+    <h2>2. Video</h2>
+
+    <div class="video-box">
+
+        <!--
+            THAY LINK YOUTUBE Ở ĐÂY.
+
+            Ví dụ link YouTube:
+            https://www.youtube.com/watch?v=ABC123
+
+            Thì iframe phải dùng:
+            https://www.youtube.com/embed/ABC123
+        -->
+
+        <iframe
+            src="https://www.youtube.com/embed/TIaNSaWjUXM"
+            title="Video YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <!-- NÚT MỞ VIDEO TRỰC TIẾP TRÊN YOUTUBE -->
+
+    <a
+        class="youtube-button"
+        href="https://youtu.be/TIaNSaWjUXM"
+        target="_blank">
+        ▶ Mở video trên YouTube
+    </a>
+
+
+    <!-- ==================== GHI CHÚ ==================== -->
+
+    <div class="copyright">
+
+        <p>
+            © 2026 - Bài thực hành Lab 5.
+        </p>
+
+        <p>
+            Infographic và video được thực hiện từ Nhiệm vụ 2.
+        </p>
+
+        <p>
+            Mã nguồn HTML được hỗ trợ tạo bởi GitHub Copilot.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
